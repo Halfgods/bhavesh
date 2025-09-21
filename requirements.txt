@@ -7,6 +7,7 @@ opencv-python-headless==4.8.1.78  # Video processing (headless for deployment)
 tensorflow          # Your ML model
 numpy          # Array operations  
 mediapipe          # Face detection (PRIMARY METHOD)
+
 Pillow          # Image processing
 aiofiles          # Async file operations
 python-dotenv          # Environment variables
