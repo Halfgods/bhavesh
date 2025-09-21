@@ -3,7 +3,8 @@ fastapi          # Your web framework
 uvicorn[standard]     # Web server  
 python-socketio       # WebSocket support
 python-multipart       # File upload handling
-opencv-python-headless  # Video processing
+
+opencv-python-headless==4.10.0.84  # Video processing
 tensorflow            # Your ML model
 numpy                 # Array operations  
 mediapipe             # Face detection (PRIMARY METHOD)
