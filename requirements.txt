@@ -1,3 +1,4 @@
+
 # Core FastAPI and WebSocket
 fastapi==0.104.1
 uvicorn[standard]==0.24.0
@@ -6,8 +7,8 @@ python-multipart==0.0.6
 
 # Computer Vision and ML (Production optimized)
 opencv-python-headless==4.8.1.78
-tensorflow==2.13.0
-numpy==1.24.3
+tensorflow>=2.12.0,<2.14.0
+numpy>=1.21.0,<1.25.0
 mediapipe==0.10.7
 
 # Image Processing
