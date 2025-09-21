@@ -1,11 +1,12 @@
-fastapi==0.104.1
-uvicorn==0.24.0
-python-socketio==5.10.0
-python-multipart==0.0.6
-opencv-python-headless==4.8.1.78
-tensorflow-cpu==2.11.0
-numpy==1.21.6
-mediapipe==0.10.7
-Pillow==10.0.1
-aiofiles==23.2.1
-python-dotenv==1.0.0
+# These are ALL needed:
+fastapi          # Your web framework
+uvicorn[standard]     # Web server  
+python-socketio       # WebSocket support
+python-multipart       # File upload handling
+opencv-python-headless  # Video processing
+tensorflow            # Your ML model
+numpy                 # Array operations  
+mediapipe             # Face detection (PRIMARY METHOD)
+Pillow                # Image processing
+aiofiles              # Async file operations
+python-dotenv          # Environment variables
