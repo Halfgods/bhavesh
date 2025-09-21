@@ -1,12 +1,21 @@
-# These are ALL needed:
-fastapi          # Your web framework
-uvicorn[standard]     # Web server  
-python-socketio       # WebSocket support
-python-multipart       # File upload handling
-opencv-python-headless  # Video processing
-tensorflow            # Your ML model
-numpy                 # Array operations  
-mediapipe             # Face detection (PRIMARY METHOD)
-Pillow                # Image processing
-aiofiles              # Async file operations
-python-dotenv          # Environment variables
+# Core FastAPI and WebSocket
+fastapi
+uvicorn[standard]
+python-socketio
+python-multipart
+
+# Computer Vision and ML - Python 3.11 Compatible
+opencv-python-headless
+tensorflow
+numpy
+mediapipe
+
+# Image Processing
+Pillow
+matplotlib
+
+# Async and File handling
+aiofiles
+
+# Environment
+python-dotenv
