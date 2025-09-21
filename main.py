@@ -1,23 +1,13 @@
-#!/usr/bin/env python3
 """
 Production-Ready Deepfake Detection API
 FastAPI + Socket.IO with MediaPipe face detection
 """
 
-import os
-# Set OpenCV to headless mode BEFORE importing cv2
-os.environ['OPENCV_IO_ENABLE_OPENEXR'] = '0'
-os.environ['OPENCV_IO_ENABLE_JASPER'] = '0'
-os.environ['OPENCV_VIDEOIO_PRIORITY_MSMF'] = '0'
-# Disable GUI backends
-import matplotlib
-matplotlib.use('Agg')
-
 import asyncio
-import cv2
 import numpy as np
 import tensorflow as tf
 import pickle
+import os
 import tempfile
 import time
 import base64
@@ -27,6 +17,14 @@ import uuid
 from typing import List, Tuple, Optional
 from concurrent.futures import ThreadPoolExecutor
 from contextlib import asynccontextmanager
+
+# Set environment variables for headless operation (must be before cv2 import)
+os.environ['OPENCV_OPENCL_RUNTIME'] = ''
+os.environ['QT_QPA_PLATFORM'] = 'offscreen'
+os.environ['DISPLAY'] = ':99' if 'DISPLAY' not in os.environ else os.environ['DISPLAY']
+
+# Now import cv2 after setting environment variables
+import cv2
 
 from fastapi import FastAPI, HTTPException, UploadFile, File
 from fastapi.middleware.cors import CORSMiddleware
