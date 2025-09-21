@@ -1,14 +1,23 @@
+#!/usr/bin/env python3
 """
 Production-Ready Deepfake Detection API
 FastAPI + Socket.IO with MediaPipe face detection
 """
+
+import os
+# Set OpenCV to headless mode BEFORE importing cv2
+os.environ['OPENCV_IO_ENABLE_OPENEXR'] = '0'
+os.environ['OPENCV_IO_ENABLE_JASPER'] = '0'
+os.environ['OPENCV_VIDEOIO_PRIORITY_MSMF'] = '0'
+# Disable GUI backends
+import matplotlib
+matplotlib.use('Agg')
 
 import asyncio
 import cv2
 import numpy as np
 import tensorflow as tf
 import pickle
-import os
 import tempfile
 import time
 import base64
