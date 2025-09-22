@@ -1,4 +1,4 @@
-# 🔍 Deepfake Detection API
+# 🔍 Deepfake Detection API through image or Video 
 
 Welcome to our cutting-edge deepfake detection service! 🚀
 
